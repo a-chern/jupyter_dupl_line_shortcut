@@ -1,7 +1,7 @@
 ## Create a duplicate line shortcut for jupyter notebook:
 
 **1.** (optional) If not exists: create a folder custom:
-`$mkdir ~/.jupyter/custom`<br>
+>`$mkdir ~/.jupyter/custom`<br>
 **2.** Run ~/mnt/.jupyter/dupl_line.sh file:
 `$bash ~/mnt/.jupyter/dupl_line.sh`<br>
 **3.** Restart jupyter notebook.<br>
