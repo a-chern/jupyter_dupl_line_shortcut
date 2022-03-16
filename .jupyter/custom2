@@ -1,0 +1,27 @@
+// alert("hello world from custom.js")
+/*
+*
+* Duplicate the current line at a cursor in the Jupyter Notebook
+* Used only CodeMirrow API - https://codemirror.net
+*
+**/
+CodeMirror.keyMap.pcDefault["Ctrl-D"] = function(cm) {
+
+    // get a position of a current cursor in a current cell
+    var current_cursor = cm.doc.getCursor();
+    
+    // read a content from a line where the current cursor is
+    var line_content = cm.doc.getLine(current_cursor.line);
+
+    // go to the end of the line/selection
+    CodeMirror.commands.goLineEnd(cm);
+
+    // make a break for the new line
+    CodeMirror.commands.newlineAndIndent(cm);
+
+    // fill the new line with the content of the line/selection above
+    cm.doc.replaceSelection(line_content);
+
+    // restore position cursor on the new line
+    cm.doc.setCursor(current_cursor.line + 1, current_cursor.ch);
+};
