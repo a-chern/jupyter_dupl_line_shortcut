@@ -2,8 +2,10 @@
 
 **1.** (optional) If not exists: create a folder custom:
 >`$mkdir ~/.jupyter/custom`<br>
+
 **2.** Run ~/mnt/.jupyter/dupl_line.sh file:
 >`$bash ~/mnt/.jupyter/dupl_line.sh`<br>
+
 **3.** Restart jupyter notebook.<br>
 **4.** Copy the following lines into the jupyter notebook and run to test if the js file is in the correct place:
 
